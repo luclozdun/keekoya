@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container center-margin">
+            <div class="nav-bar">
+                <ul class="nav-option left animation-block">
+                    <li class="nav-option flex-middle">
+                        <a class="title font-color">KeeKooYaa</a>
+                    </li>
+                </ul>
+                <ul class="nav-option right">
+                    <li class="nav-option flex-middle animation-block">
+                        <a class="option animation-up font-color">Login</a>
+                    </li>
+                    <li class="nav-option flex-middle animation-block">
+                        <a class="option animation-up font-color">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="food-create">
+                
+                <div class="food-create-empty" style="display: none;">
+                    <div class="food-empty-show">
+                        <div class="food-create-add">
+                            <div class="food-create-cancel">
+                                <button onclick="food_create_close()">X</button>
+                            </div>
+                            <div class="food-create-title">
+                                <h1>What do you want to create?</h1>
+                            </div>
+                            <div class="food-create-select">
+                                <select>
+                                    <option>La primera opción</option>
+                                    <option>La segunda opción</option>
+                                    <option>La tercera opción</option>
+                                </select>                                
+                            </div>
+                            <div class="food-create-select">
+                                <select>
+                                    <option>La primera opción</option>
+                                    <option>La segunda opción</option>
+                                    <option>La tercera opción</option>
+                                </select>                                
+                            </div>
+                            <div class="food-create-button">
+                                <button>Create</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-empty-icon">
+                        <svg viewBox="0 0 22 22" fill="none" onclick="food_create_open()">
+                            <circle cx="11" cy="11" r="10" fill="#EBEBEB" stroke="black" stroke-width="0.1" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11 4C9.09091 4.00003 9.09091 9.09091 9.09091 9.09091C9.09091 9.09091 3.99994 9.09091 4 11C4.00006 12.9091 9.09091 12.9091 9.09091 12.9091C9.09091 12.9091 9.09091 18 11 18C12.9091 18 12.9091 12.9091 12.9091 12.9091C12.9091 12.9091 18 12.9091 18 11C18 9.09091 12.9091 9.09091 12.9091 9.09091C12.9091 9.09091 12.9091 3.99997 11 4Z" fill="white" stroke="black"/>
+                        </svg>
+                    </div>
+                    <div class="food-empty-desc">
+                        <h3>
+                            No posees ninguna producto en tu carrito. Asegurate de crear tus productos haciendo click en el icono.
+                        </h3>
+                    </div>
+                </div>
+
+
+                <div class="food-create-full">
+                    <div class="btn-add">
+                        <button class="accept" onclick="food_create_show()">Create</button>
+                    </div>
+                    <div class="food-create-add">
+                        <div class="food-create-cancel">
+                            <button onclick="food_create_hidden()">X</button>
+                        </div>
+                        <div class="food-create-title">
+                            <h1>What do you want to create?</h1>
+                        </div>
+                        <div class="food-create-select">
+                            <div class="food-select">
+                                <select>
+                                    <option>La primera opción</option>
+                                    <option>La segunda opción</option>
+                                    <option>La tercera opción</option>
+                                </select> 
+                                <div class="select-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="53" height="36" viewBox="0 0 53 36">
+                                        <path id="Polígono_18" data-name="Polígono 18" d="M20.057,8.752a8,8,0,0,1,12.885,0L43.62,23.257A8,8,0,0,1,37.177,36H15.823A8,8,0,0,1,9.38,23.257Z" transform="translate(53 36) rotate(180)" fill="#6a6a6a"/>
+                                    </svg>
+                                </div>  
+                            </div>                       
+                        </div>
+                        <div class="food-create-select">
+                            <div class="food-select">
+                                <select>
+                                    <option>La primera opción</option>
+                                    <option>La segunda opción</option>
+                                    <option>La tercera opción</option>
+                                </select> 
+                                <div class="select-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="53" height="36" viewBox="0 0 53 36">
+                                        <path id="Polígono_18" data-name="Polígono 18" d="M20.057,8.752a8,8,0,0,1,12.885,0L43.62,23.257A8,8,0,0,1,37.177,36H15.823A8,8,0,0,1,9.38,23.257Z" transform="translate(53 36) rotate(180)" fill="#6a6a6a"/>
+                                    </svg>
+                                </div>  
+                            </div>                       
+                        </div>
+                        <div class="food-create-button">
+                            <button class="accept">Create</button>
+                        </div>
+                    </div>
+                    <div class="food-show-admin">
+                        <div class="food-delete">
+                        </div>
+                        <div class="food-info">
+                            <div class="food-title">
+                                <p>Tres Leches</p>
+                            </div>
+                            <div class="food-img">
+                            </div>
+                            <div class="food-btn-img">
+                                <button>Photo</button>
+                            </div>
+                            <div class="food-detail">
+                                <div class="food-select">
+                                    <select>
+                                        <option>La primera opción</option>
+                                        <option>La segunda opción</option>
+                                        <option>La tercera opción</option>
+                                    </select>
+                                    <div class="select-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="53" height="36" viewBox="0 0 53 36">
+                                            <path id="Polígono_18" data-name="Polígono 18" d="M20.057,8.752a8,8,0,0,1,12.885,0L43.62,23.257A8,8,0,0,1,37.177,36H15.823A8,8,0,0,1,9.38,23.257Z" transform="translate(53 36) rotate(180)" fill="#6a6a6a"/>
+                                        </svg>
+                                    </div>                                    
+                                </div>
+                                <div class="food-select">
+                                    <select>
+                                        <option>La primera opción</option>
+                                        <option>La segunda opción</option>
+                                        <option>La tercera opción</option>
+                                    </select>
+                                    <div class="select-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="53" height="36" viewBox="0 0 53 36">
+                                            <path id="Polígono_18" data-name="Polígono 18" d="M20.057,8.752a8,8,0,0,1,12.885,0L43.62,23.257A8,8,0,0,1,37.177,36H15.823A8,8,0,0,1,9.38,23.257Z" transform="translate(53 36) rotate(180)" fill="#6a6a6a"/>
+                                        </svg>
+                                    </div>                                    
+                                </div>
+                                <div class="food-select">
+                                    <select>
+                                        <option>La primera opción</option>
+                                        <option>La segunda opción</option>
+                                        <option>La tercera opción</option>
+                                    </select>
+                                    <div class="select-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="53" height="36" viewBox="0 0 53 36">
+                                            <path id="Polígono_18" data-name="Polígono 18" d="M20.057,8.752a8,8,0,0,1,12.885,0L43.62,23.257A8,8,0,0,1,37.177,36H15.823A8,8,0,0,1,9.38,23.257Z" transform="translate(53 36) rotate(180)" fill="#6a6a6a"/>
+                                        </svg>
+                                    </div>                                    
+                                </div>
+                                <div class="food-detail-double">
+                                    <div class="food-select-double">
+                                        <input class="price" placeholder="Precio">
+                                        <span>
+                                            S/
+                                        </span>
+                                    </div>
+                                    <div class="food-select-double">
+                                        <input placeholder="Stock">
+                                    </div>
+                                </div>
+                                <button class="accept">Add</button>
+                            </div>
+                        </div>
+                        
+                        <div class="food-data">
+                            <div class="food-data-search">
+                                <input placeholder="Find by filled">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                    <path d="M448.3,424.7L335,311.3c20.8-26,33.3-59.1,33.3-95.1c0-84.1-68.1-152.2-152-152.2c-84,0-152,68.2-152,152.2  s68.1,152.2,152,152.2c36.2,0,69.4-12.7,95.5-33.8L425,448L448.3,424.7z M120.1,312.6c-25.7-25.7-39.8-59.9-39.8-96.3  s14.2-70.6,39.8-96.3S180,80,216.3,80c36.3,0,70.5,14.2,96.2,39.9s39.8,59.9,39.8,96.3s-14.2,70.6-39.8,96.3  c-25.7,25.7-59.9,39.9-96.2,39.9C180,352.5,145.8,338.3,120.1,312.6z"/>
+                                </svg>
+                                
+                            </div>
+                            <div class="food-data-container">
+                                <div class="food-data-table title">
+                                    <div class="row title">
+                                        <div class="column">
+                                            <div class="title taste">
+                                                <p>Sabor</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="title filled">
+                                                <p>Relleno</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="title stock">
+                                                <p>Stock</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="title size">
+                                                <p>Tamaño</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="title price">
+                                                <p>Precio</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food-data-table normal">
+                                    <div class="row">
+                                        <div class="column">
+                                            <div class="normal taste">
+                                                <p>Sabor</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal filled">
+                                                <p>Relleno</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal stock">
+                                                <p>Stock</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal size">
+                                                <p>Tamaño</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal price">
+                                                <p>Precio</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="special">
+                                                <button class="delete"></button>
+                                                <button class="update"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="column">
+                                            <div class="normal taste">
+                                                <p>Sabor</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal filled">
+                                                <p>Relleno</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal stock">
+                                                <p>Stock</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal size">
+                                                <p>Tamaño</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal price">
+                                                <p>Precio</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="special">
+                                                <button class="delete"></button>
+                                                <button class="update"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="column">
+                                            <div class="normal taste">
+                                                <p>Sabor</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal filled">
+                                                <p>Relleno</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal stock">
+                                                <p>Stock</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal size">
+                                                <p>Tamaño</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal price">
+                                                <p>Precio</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="special">
+                                                <button class="delete"></button>
+                                                <button class="update"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="column">
+                                            <div class="normal taste">
+                                                <p>Sabor</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal filled">
+                                                <p>Relleno</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal stock">
+                                                <p>Stock</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal size">
+                                                <p>Tamaño</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal price">
+                                                <p>Precio</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="special">
+                                                <button class="delete"></button>
+                                                <button class="update"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="column">
+                                            <div class="normal taste">
+                                                <p>Sabor</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal filled">
+                                                <p>Relleno</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal stock">
+                                                <p>Stock</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal size">
+                                                <p>Tamaño</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal price">
+                                                <p>Precio</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="special">
+                                                <button class="delete"></button>
+                                                <button class="update"></button>
+                                            </div>
+                                        </div>
+                                    </div><div class="row">
+                                        <div class="column">
+                                            <div class="normal taste">
+                                                <p>Sabor</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal filled">
+                                                <p>Relleno</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal stock">
+                                                <p>Stock</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal size">
+                                                <p>Tamaño</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal price">
+                                                <p>Precio</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="special">
+                                                <button class="delete"></button>
+                                                <button class="update"></button>
+                                            </div>
+                                        </div>
+                                    </div><div class="row">
+                                        <div class="column">
+                                            <div class="normal taste">
+                                                <p>Sabor</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal filled">
+                                                <p>Relleno</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal stock">
+                                                <p>Stock</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal size">
+                                                <p>Tamaño</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="normal price">
+                                                <p>Precio</p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="special">
+                                                <button class="delete"></button>
+                                                <button class="update"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="footer">
+                <div class="footer-menu flex mt-30" >
+                    <div class="footer-cell-1">
+                        <ul class="footer-font">
+                            <li  class="title">
+                                <a>Categoria</a>
+                            </li>
+                            <li class="desc">
+                                <a>Empanadas</a>
+                            </li>
+                            <li class="desc">
+                                <a>Bocaditos</a>
+                            </li>
+                            <li class="desc">
+                                <a>Tortas</a>
+                            </li>
+                            <li class="desc">
+                                <a>Tartas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-cell-2">
+                        <div class="footer-2-row-1">
+                            <img src="../Img/appStore.png">
+                        </div>
+                        <div class="footer-2-row-1">
+                            <img src="../Img/playStore.png">
+                        </div>
+                        <div class="flex-space-around footer-2-row-2">
+                            <div class="social"> <img src="../Img/iFacebook.png"> </div>
+                            <div class="social"> <img src="../Img/iTwitter.png"> </div>
+                            <div class="social"> <img src="../Img/iInstagram.jpg"> </div>
+                        </div>
+                    </div>
+                    <div class="footer-cell-3">
+                        <ul class="footer-font">
+                            <li class="title">
+                                <a>Información de tu interes</a>
+                            </li>
+                            <li class="desc">
+                                <a>Asóciate a nosotros</a>
+                            </li>
+                            <li class="desc">
+                                <a>Asóciate a nosotros</a>
+                            </li>
+                            <li class="desc">
+                                <a>Requisitos de motorizado</a>
+                            </li>
+                            <li class="desc">
+                                <a>Atención al cliente</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-cell-4">
+                    </div>                    
+                </div>
+        </div>  
+        <script src="../Js/FoodCreate.js"></script>
+    </body>    
+</html>
+
+<style>
+    @import '../Components/nav-bar.css';
+    @import '../Components/footer.css';
+
+    @import '../Font/FontType.css';
+    @import '../css/card.css';
+    @import '../css/flex.css';
+    @import '../css/imageopacity.css';
+    @import '../css/animation.css';
+    @import '../css/input.css';
+    @import '../css/margin.css';
+    @import '../css/after.css';
+    @import '../css/padding.css';
+    @import '../css/limit.css';
+    @import '../css/login.css';
+    
+</style>
+
+<style>
+
+*{
+    margin: 0px;
+}
+
+.font-color{
+    color: rgb(255, 244, 238);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+</style>
