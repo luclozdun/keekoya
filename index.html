@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
@@ -22,9 +23,8 @@
                 </ul>
             </div>
 
-            <div class="food-create">
-                
-                <div class="food-create-empty" style="display: none;">
+            <div class="food-create">                
+                <div class="food-create-empty">
                     <div class="food-empty-show">
                         <div class="food-create-add">
                             <div class="food-create-cancel">
@@ -34,21 +34,35 @@
                                 <h1>What do you want to create?</h1>
                             </div>
                             <div class="food-create-select">
-                                <select>
-                                    <option>La primera opción</option>
-                                    <option>La segunda opción</option>
-                                    <option>La tercera opción</option>
-                                </select>                                
+                                <div class="food-select">
+                                    <select>
+                                        <option>La primera opción</option>
+                                        <option>La segunda opción</option>
+                                        <option>La tercera opción</option>
+                                    </select> 
+                                    <div class="select-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="53" height="36" viewBox="0 0 53 36">
+                                            <path id="Polígono_18" data-name="Polígono 18" d="M20.057,8.752a8,8,0,0,1,12.885,0L43.62,23.257A8,8,0,0,1,37.177,36H15.823A8,8,0,0,1,9.38,23.257Z" transform="translate(53 36) rotate(180)" fill="#6a6a6a"/>
+                                        </svg>
+                                    </div>  
+                                </div>                       
                             </div>
                             <div class="food-create-select">
-                                <select>
-                                    <option>La primera opción</option>
-                                    <option>La segunda opción</option>
-                                    <option>La tercera opción</option>
-                                </select>                                
+                                <div class="food-select">
+                                    <select>
+                                        <option>La primera opción</option>
+                                        <option>La segunda opción</option>
+                                        <option>La tercera opción</option>
+                                    </select> 
+                                    <div class="select-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="53" height="36" viewBox="0 0 53 36">
+                                            <path id="Polígono_18" data-name="Polígono 18" d="M20.057,8.752a8,8,0,0,1,12.885,0L43.62,23.257A8,8,0,0,1,37.177,36H15.823A8,8,0,0,1,9.38,23.257Z" transform="translate(53 36) rotate(180)" fill="#6a6a6a"/>
+                                        </svg>
+                                    </div>  
+                                </div>                       
                             </div>
                             <div class="food-create-button">
-                                <button>Create</button>
+                                <button class="accept">Create</button>
                             </div>
                         </div>
                     </div>
@@ -64,6 +78,8 @@
                         </h3>
                     </div>
                 </div>
+
+
 
 
                 <div class="food-create-full">
@@ -450,65 +466,6 @@
                 </div>
             </div>
 
-            
-
-            <div class="footer">
-                <div class="footer-menu flex mt-30" >
-                    <div class="footer-cell-1">
-                        <ul class="footer-font">
-                            <li  class="title">
-                                <a>Categoria</a>
-                            </li>
-                            <li class="desc">
-                                <a>Empanadas</a>
-                            </li>
-                            <li class="desc">
-                                <a>Bocaditos</a>
-                            </li>
-                            <li class="desc">
-                                <a>Tortas</a>
-                            </li>
-                            <li class="desc">
-                                <a>Tartas</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-cell-2">
-                        <div class="footer-2-row-1">
-                            <img src="../Img/appStore.png">
-                        </div>
-                        <div class="footer-2-row-1">
-                            <img src="../Img/playStore.png">
-                        </div>
-                        <div class="flex-space-around footer-2-row-2">
-                            <div class="social"> <img src="../Img/iFacebook.png"> </div>
-                            <div class="social"> <img src="../Img/iTwitter.png"> </div>
-                            <div class="social"> <img src="../Img/iInstagram.jpg"> </div>
-                        </div>
-                    </div>
-                    <div class="footer-cell-3">
-                        <ul class="footer-font">
-                            <li class="title">
-                                <a>Información de tu interes</a>
-                            </li>
-                            <li class="desc">
-                                <a>Asóciate a nosotros</a>
-                            </li>
-                            <li class="desc">
-                                <a>Asóciate a nosotros</a>
-                            </li>
-                            <li class="desc">
-                                <a>Requisitos de motorizado</a>
-                            </li>
-                            <li class="desc">
-                                <a>Atención al cliente</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-cell-4">
-                    </div>                    
-                </div>
-        </div>  
         <script src="../Js/FoodCreate.js"></script>
     </body>    
 </html>
@@ -541,6 +498,7 @@
     color: rgb(255, 244, 238);
     font-family: 'Roboto', sans-serif;
 }
+
 
 *{
     font-family: 'Roboto';
@@ -644,6 +602,7 @@ div.food-create > div.food-create-empty > div.food-empty-show{
     left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
     display: none;
     justify-content: center;
     align-items: center;
@@ -702,6 +661,7 @@ div.food-create-add > div.food-create-title{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     text-decoration: underline;
     font-size: 20px;
 }
@@ -745,12 +705,12 @@ div.food-create-add > div.food-create-button > button{
 }
 
 div.food-create > div.food-create-empty{
+    display: none;
     width: 700px;
     height: 300px;
     position: relative;
     overflow: hidden;
     border-radius: 36px;
-    display: none;
     align-items: center;
     margin-top: 100px;
     flex-direction: column;
@@ -1164,7 +1124,22 @@ div.food-data-table::-webkit-scrollbar-thumb:hover {
 }
 
 
-@media  screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
+
+    div.food-create > div.food-create-empty{
+        width: 80%;
+        height: 100%;
+    }
+
+    div.food-create-add{
+        width: 90%;
+    }
+
+
+    div.food-create > div.food-create-empty > div.food-empty-desc{
+        margin-bottom: 20px;
+    }
+
     div.food-create-add > div.food-create-title{
         font-size: 18px;
         margin-top: 50px;
@@ -1172,6 +1147,7 @@ div.food-data-table::-webkit-scrollbar-thumb:hover {
 
     div.food-create > div.food-create-full {
         width: 95%;
+        margin-top: 15px;
     }
 
     div.food-show-admin > div.food-info > div.food-detail{
@@ -1339,4 +1315,109 @@ div.food-data-table::-webkit-scrollbar-thumb:hover {
         justify-content: space-evenly;
     }
 }
+
+
+@media (max-width: 500px) {
+
+    div.food-create-add > div.food-create-select > div > select{
+        width: 300px;
+    }
+
+    div.food-create-full > div.food-create-add{
+        border-width: 1px;
+    }
+
+    div.food-create-full > div.food-create-add > div.food-create-cancel > button{
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+    }
+
+    div.food-create-add > div.food-create-title{
+        font-size: 16px;
+        font-weight: normal;
+        margin-top: 60px;
+        font-style: normal;
+    }
+
+    div.food-create-add > div.food-create-button > button{
+        width: 95%;
+        border-radius: 10px;
+    }
+
+    div.btn-add > button{
+        width: 100%;
+        height: 50px;
+    }
+
+    div.food-show-admin > div.food-info > div.food-title{
+        margin-top: 30px;
+    }
+
+    div.food-show-admin > div.food-info > div.food-title > p{
+        font-size: 22px;
+        width: 150px;
+    }
+    
+    div.food-show-admin > div.food-info > div.food-img{
+        width: 150px;
+        height: 150px;
+    }
+
+    div.food-show-admin > div.food-info > div.food-btn-img > button{
+        font-size: 19px;
+        width: 100px;
+        height: 40px;
+        border-width: 1px;
+    }
+
+    div.select-arrow > svg{
+        width: 28px;
+        height: 28px;
+    }
+
+    div.food-create-add > div.food-create-select > div > select,
+    div.food-show-admin > div.food-info > div.food-detail > div.food-detail-double > div.food-select-double > input,
+    div.food-show-admin > div.food-info > div.food-detail > div.food-detail-double > div.food-select-double > span,
+    div.food-show-admin > div.food-info > div.food-detail > div.food-select > select,
+    div.food-show-admin > div.food-info > div.food-detail > div.food-detail-double > div.food-select-double > input::placeholder{
+        font-size: 19px;
+        font-weight: normal;
+    }
+
+    div.food-show-admin > div.food-info > div.food-detail > div.food-select > select{
+        margin-top: 10px;
+    }
+
+    div.food-show-admin > div.food-info > div.food-detail > div.food-detail-double > div.food-select-double > input.price,
+    div.food-show-admin > div.food-info > div.food-detail > div.food-detail-double > div.food-select-double > input{
+        width: 96%;
+    }
+
+    div.food-show-admin > div.food-info > div.food-detail > button{
+        font-size: 19px;
+        padding: 8px 0px;
+        border-radius: 9px;
+        width: 100%;
+
+    }
+
+    div.food-create-full > div.food-show-admin > div.food-data > div.food-data-search{
+        width: 170px;
+        height: 40px;
+        border-radius: 10px;
+        margin: 10px auto;
+    }
+
+    div.food-create-full > div.food-show-admin > div.food-data > div.food-data-search > input,
+    div.food-create-full > div.food-show-admin > div.food-data > div.food-data-search > input::placeholder{
+        font-size: 18px;
+    }
+
+    div.food-create-full > div.food-show-admin > div.food-data > div.food-data-search > svg{
+        width: 25px;
+        height: 25px;
+    }
+}
+
 </style>
